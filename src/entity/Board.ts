@@ -50,5 +50,9 @@ export class Board extends BaseEntity{
     @Field(()=> String, {nullable: true})
     @Column({type: "text", default: ""})
     c3: string
+
+    @Field(()=> String, {nullable: true})
+    @Column({type: "text", default: ""})
+    history: string
 }
 

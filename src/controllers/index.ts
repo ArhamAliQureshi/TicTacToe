@@ -8,10 +8,12 @@ export async function makeMoveController(params: MakeMoveInput): Promise<Game>{
     const isNotValid = validateMove(params, game);
     if(!isNotValid){
     
-        let move = {};
+        let move = {
+            history: game?.board.history+=`=>${params.box}:${game?.nextMove}`
+        };
         move[key] = game?.nextMove;
 
-        await Board.update({id: game.board.id}, move);//Update move                    
+        await Board.update({id: game.board.id}, move);//Update move                 
         game = await Game.findOne({id: params.id}, {relations: ["board"]});    
         let result = await findWinner(game);                
         if(result){
