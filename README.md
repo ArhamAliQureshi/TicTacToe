@@ -30,7 +30,7 @@ mutation {
   }
 }
 ```
-#### Find Game
+#### Find Game By Id
 ```sh
 {
   findGame(params:{id: <GAME ID>}){
@@ -84,6 +84,16 @@ mutation{
       c1,
       c2,
       c3,
+      history
+    }
+  }
+}
+```
+### Get history for a game by
+```sh
+{
+  findGame(params:{id: 4}){    
+    board{            
       history
     }
   }
