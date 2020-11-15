@@ -3,13 +3,17 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Following assumptions
+Following assumptions:
   - Playre 1 symbol should be X (HOST)
   - Playre 2 symbol should be O (OPPONENT)
   - If player 2 has not joined the game, Computer AI will play as the opponent.
   - Subscription is not working at the moment so find game api needs to be used as polling
 
-Important Information
+Steps to start game:
+  - $npm install
+  - $npm start
+ 
+Important Information:
   - use $npm start to run the application
   - Port: 4000
   - GraphQL Playground http://localhost:4000/graphql
@@ -18,7 +22,7 @@ Important Information
 #### Create Game
 ```sh
 mutation {
-  createGame(params: { hostName: "<Player Name>"000000000000000000000000000000000000000000000000000000000000000000" })
+  createGame(params: { hostName: "<Player Name>" })
   {
     id,
     hostName,
