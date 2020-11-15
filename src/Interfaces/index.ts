@@ -1,0 +1,1 @@
+export { CreateGameInput, JoinGameInput } from "./GamesInput";
